@@ -305,8 +305,6 @@ def play_simulation():
     global all_objects
     if all_objects:
         if simulation_running == False:
-            for obj in all_objects:
-                obj.initial_velocity = obj.velocity
             simulation_running = True
             update_texts()
             run_simulation()
