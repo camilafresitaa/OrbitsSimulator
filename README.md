@@ -22,7 +22,7 @@ The project combines **VPython** for 3D visualization and **Tkinter** for the gr
 The simulation is built around basic physics formulas and a simple numerical integration scheme.  
 Here’s a closer look at the underlying mechanics:
 
-### Gravitational Force Calculation:
+### Gravitational Force calculation:
 - **Newton's Law of Universal Gravitation**  
   Each celestial body computes the gravitational force exerted by every other body using the formula:
 
@@ -35,8 +35,8 @@ Here’s a closer look at the underlying mechanics:
 
   This is implemented in the `calc_gravitational_force` method of the `Body` class.
 
-### Numerical Integration:
-- **Euler Integration Method**  
+### Numerical integration:
+- **Euler Method**  
   The simulation updates the velocity and position of each body using the Euler method:  
   $\mathbf{v}(t+\Delta t) = \mathbf{v}(t) + \mathbf{a}(t) \Delta t$  
   $\mathbf{x}(t+\Delta t) = \mathbf{x}(t) + \mathbf{v}(t) \Delta t$
@@ -47,26 +47,26 @@ Here’s a closer look at the underlying mechanics:
   
   While the Euler method is simple and computationally inexpensive, it can introduce numerical errors over long simulation periods and may not conserve energy perfectly.
 
-### Constants and Their Values:
+### Constants and their values:
 In the simulation, some constants are set to values that simplify the calculations:
 - **G = 1:** The gravitational constant is set to 1 for simplicity. This does not represent the actual gravitational constant, but it simplifies calculations for educational purposes.
 - **DT = 0.01:** The time step is fixed at 0.01. This value provides a good balance between simulation accuracy and computational performance. Adjusting DT can affect the precision and stability of the simulation.
 
 
-### Approximations and Limitations:
-- **Simplified Dynamics**  
+### Approximations and limitations:
+- **Simplified dynamics**  
   - The simulation does not include effects such as relativistic corrections, collisions, or tidal forces.
   - It assumes point-mass interactions without considering rotational dynamics or other complex phenomena.
 
-- **Integration Accuracy**  
+- **Integration accuracy**  
   - Using a fixed time step and Euler integration, the simulation may show drifting or unstable orbits over time.
   - The calculated trajectories are approximate and best viewed as illustrative rather than exact.
 
-- **Overall Accuracy**  
+- **Overall accuracy**  
   Although the gravitational force calculation follows Newtonian mechanics accurately, the overall simulation accuracy is limited by the numerical integration and the simplified physical model.
   This means that while the simulation provides a good visual and educational representation of gravitational interactions, it is not suited for high-precision scientific computations.
 
-## How to Run
+## How to run
 1. Clone this repository:
    
    ```
